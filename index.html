@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;1,300&display=swap');
+         body{
+                margin: 0;
+                overflow-x: hidden
+            }
+        
+        body::-webkit-scrollbar {
+            width: 12px;               /* width of the entire scrollbar */
+        }
+    
+            
+    
+            body::-webkit-scrollbar-thumb {
+            background-color: #81131a;    /* color of the scroll thumb */
+            border-radius: 20px;       /* roundness of the scroll thumb */
+            border: 3px solid #ce8186;  /* creates padding around scroll thumb */
+        }
+            /*navbar */
+            nav{
+                width: 100%;
+                height: 122px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: fixed;
+                z-index: 1000;
+                background: white;
+    
+            }
+            nav .logoNavbar{
+                justify-content: end;
+                margin-left: 72px;
+            }
+    
+            nav .logoNavbar img{
+                width: 200px;
+                margin-top: 13px;
+            }
+            nav .navbarItems ul{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding-left: 0px;
+    
+            }
+    
+            nav .navbarItems ul li{
+                list-style: none;
+                margin-right: 35px;
+                cursor: pointer;
+            }
+    
+            nav .navbarItems ul li a{
+                text-decoration: none;
+                color: #FF0019;
+                font-size: 15px;
+                font-family: 'Open Sans', sans-serif;        
+            }
+
+
+             /* Seccion requisitos */
+
+        .requisitos{
+            margin-top: 85px;
+
+            text-align: center;
+            font-size: 28px;
+            font-family: 'Open Sans', sans-serif;        
+
+            color: #FF0019;
+        }
+
+        .requisitos .items div{
+            background: url(requisitos-para-abrir-el-crédito.png);
+            width: 100%;
+            background-repeat: no-repeat;
+            height: 923px;
+        
+        }
+
+        /* Seccion beneficios */
+        .beneficiosSection{
+            background: url(https://creditoacr.com/wp-content/uploads/2022/04/beneficios.png);
+            height: 822px;
+            background-size: cover;
+            width: 100%;
+            margin-top: 0px;
+        }
+        .beneficiosSection button{
+            background: red;
+    border-radius: 50px;
+    border: 1px solid red;
+    color: white;
+    width: 268px;
+    height: 84px;
+    font-size: 28px;
+    cursor: pointer;
+        }
+        .beneficiosSection .obtenerB{
+            margin-top: 623px;
+            margin-left: 326px;
+            margin-right: 826px;
+        }
+
+        /* seccion de la app */
+
+        .appSection{
+            background: url(https://creditoacr.com/wp-content/uploads/2022/04/4-Beneficios-de-la-App-e1650665568965.png);
+            height: 613px;
+                       background-size: cover;
+            width: 100%;
+        }
+
+          /* slider containers*/
+          .slider-container {
+  padding: 10px;
+  background-color: white;
+  width: 100%;
+}
+
+.slider-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-item:not(.slider-item:last-child) {
+  margin-right: 20px;
+
+}
+
+.slider-item {
+  background-color: white;
+  margin-bottom: -4px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition-duration: 3s, 5s;
+
+}
+
+.slider-item span{
+    background: #FF0019;
+    color: white;
+    font-family: 'Open Sans', sans-serif; 
+    height: 30px;
+    border-radius: 19px;
+
+}
+
+.slider-item img {
+  max-width: 100%;
+}
+
+.slider-arrows {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  bottom: 120px;
+  margin-right: 18px;  
+  position: relative;
+
+
+}
+
+.slider-arrows button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.aliados{
+    background: #EEEDED;
+    text-align: center;
+    position: unset;
+}
+
+.aliados .aliadosText{
+    margin-top: 0px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.aliados .aliadosText h2{    
+    margin-top: 50px;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 59px;
+
+
+}
+.aliados .aliadosText h4{
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 26px;
+
+
+}
+
+.footerSect{
+    background: url(https://creditoacr.com/wp-content/uploads/2022/04/unnamed.png);
+    height: 439px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+}
+
+.footerSect .menuFooter{
+    height: 264px;
+    margin-top: 78px;
+    margin-left: 106px;
+}
+.footerSect .menuFooter ul li{
+list-style: none;
+margin-top: 24px;
+}
+
+.footerSect .menuFooter ul li a{
+   text-decoration: none;
+   font-size: 30px;
+   color: #EEEDED;
+
+}
+
+.footerSect .menuFooterSegundo{
+    height: 264px;
+    margin-top: 78px;
+    margin-left: 130px;
+}
+
+.footerSect .menuFooterSegundo ul li{
+    list-style: none;
+margin-top: 34px;
+}
+
+.footerSect .menuFooterSegundo ul li a{
+   text-decoration: none;
+   font-size: 30px;
+   color: #EEEDED;
+
+}
+
+@media (max-width:  2129px) {
+    .footerSect {
+        height: 387px;
+    }
+.footerSect .menuFooter ul li{
+margin-top: 20px;
+}
+
+.footerSect .menuFooter ul li a{
+   font-size: 25px;
+
+}
+.footerSect .menuFooterSegundo ul li{
+    margin-top: 26px;
+}
+
+.footerSect .menuFooterSegundo ul li a{
+   font-size: 25px;
+}
+.requisitos .items div {
+    height: 774px;
+}
+}
+
+@media (max-width: 1982px) {
+    .requisitos .items div {
+    height: 722px;
+}
+.beneficiosSection {
+    height: 733px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 551px;
+    margin-left: 315px;
+    margin-right: 764px;
+}
+.appSection {
+    height: 557px;
+}
+.footerSect {
+    height: 354px;
+}
+}
+
+@media (max-width: 1794px) {
+    .requisitos .items div {
+    height: 645px !important;
+}
+.beneficiosSection {
+    height: 652px;
+}
+.beneficiosSection button{
+    height: 71px;
+
+}
+.beneficiosSection .obtenerB {
+    margin-top: 498px;
+    margin-left: 286px;
+    margin-right: 644px;
+}
+.appSection {
+    height: 524px;
+}
+.footerSect {
+    height: 316px;
+}
+
+.footerSect .menuFooter ul li{
+margin-top: 14px;
+}
+
+.footerSect .menuFooter ul li a{
+   font-size: 20px;
+
+}
+.footerSect .menuFooterSegundo ul li{
+    margin-top: 19px;
+}
+
+.footerSect .menuFooterSegundo ul li a{
+   font-size: 20px;
+}
+.requisitos .items div {
+    height: 596px;
+}
+
+}
+@media (max-width: 1586px) {
+    .beneficiosSection {
+    height: 548px;
+}
+.appSection {
+    height: 462px;
+}
+.beneficiosSection button{
+    height: 54px;
+
+}
+.beneficiosSection .obtenerB {
+    margin-top: 453px;
+    margin-left: 265px;
+    margin-right: 526px;
+}
+.footerSect {
+    height: 282px;
+}
+.footerSect .menuFooter{
+    margin-top: 60px;
+    height: 196px;
+}
+.footerSect .menuFooter ul li{
+margin-top: 10px;
+}
+
+.footerSect .menuFooter ul li a{
+   font-size: 20px;
+
+}
+.footerSect .menuFooterSegundo ul li{
+    margin-top: 12px;
+}
+
+.footerSect .menuFooterSegundo ul li a{
+   font-size: 20px;
+}
+.requisitos .items div {
+    height: 186px;
+}
+
+.footerSect .menuFooterSegundo{
+    height: 196px;
+}
+}
+
+@media (max-width: 1450px) {
+    .requisitos .items div {
+    height: 535px !important;
+}
+nav .navbarItems ul li {
+    margin-right: 23px;
+}
+.beneficiosSection button{
+    height: 43px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 400px;
+    margin-left: 199px;
+    margin-right: 481px;
+}
+nav .navbarItems ul li a {
+    font-size: 13px;
+}
+.beneficiosSection {
+    height: 459px;
+}
+.appSection {
+    height: 422px;
+}
+.footerSect {
+    height: 247px;
+}
+.footerSect .menuFooterSegundo {
+    height: 148px;
+    margin-top: 50px;
+
+}
+.footerSect .menuFooter {
+    margin-top: 40px;
+    height: 168px;
+}
+}
+@media (max-width: 1259px) {
+    .requisitos .items div {
+    height: 473px !important;
+}
+nav .navbarItems ul li {
+    margin-right: 20px;
+}
+nav .navbarItems ul li a {
+    font-size: 11px;
+}
+.appSection {
+    height: 358px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 360px;
+    margin-left: 163px;
+    margin-right: 393px;
+}
+.footerSect {
+    height: 208px;
+}
+.footerSect .menuFooter {
+    margin-top: 22px;
+    height: 148px;
+}
+.footerSect .menuFooterSegundo {
+    height: 36px;
+    margin-top: 35px;
+}
+}
+@media (max-width: 1090px) {
+    nav .navbarItems ul li a {
+    font-size: 9px;
+}
+.requisitos .items div {
+    height: 383px !important;
+}
+.beneficiosSection {
+    height: 376px;
+}
+.beneficiosSection button{
+    width: 227px;
+    height: 36px;
+    font-size: 24px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 301px;
+    margin-right: 246px;
+}
+.appSection {
+    height: 308px;
+}
+.aliados .aliadosText h2 {
+    font-size: 42px;
+}
+.aliados .aliadosText h4 {
+    font-size: 13px;
+}
+.footerSect {
+    height: 196px;
+}
+.footerSect .menuFooter ul li a {
+    font-size: 15px;
+}
+.footerSect .menuFooterSegundo ul li a {
+    font-size: 16px;
+}
+}
+@media (max-width: 927px) {
+    .navbarItems ul li a{
+            display: none;
+        }
+        .navbarItems ul li i{
+            display: block !important;
+            font-size: 42px;
+            color: red;
+        }
+        .requisitos .items div {
+    height: 243px !important;
+}
+.beneficiosSection {
+    height: 309px;
+}
+.appSection {
+    height: 321px;
+}
+.footerSect {
+    height: 168px;
+}
+.footerSect .menuFooter {
+    margin-top: 9px;
+}        
+.footerSect .menuFooterSegundo {
+    margin-top: 23px;
+}
+
+.navbarItemsMovil {
+    position: fixed;
+    background: white;
+    width: 100%;
+    height: 372.188px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.navbarItemsMovil .firtsNavs ul {
+
+display: grid;
+margin-top: 130px;
+}
+
+.navbarItemsMovil .secondNavs ul {
+    display: grid;
+margin-top: 130px;
+margin-left: 71px;
+}
+.navbarItemsMovil .firtsNavs ul {
+    list-style: none;
+    border: none;
+}
+.navbarItemsMovil .firtsNavs ul li{
+    margin-top: 18px;
+}
+.navbarItemsMovil .firtsNavs ul li a{
+    text-decoration: none;
+    color: #FF0019;
+    font-family: 'Open Sans', sans-serif;        
+}
+
+.navbarItemsMovil .secondNavs ul li{
+    list-style: none;
+    border: none;
+    margin-top: 18px;
+
+}
+.navbarItemsMovil .secondNavs ul li a{
+    text-decoration: none;
+    color: #FF0019;
+    font-family: 'Open Sans', sans-serif;        
+
+
+}
+.navbarItems ul .consul{
+    display: block !important;
+}
+
+.navbarItems ul .consul button{
+    border-radius: 50px !important;
+    background: none !important;
+    border: 1px solid red !important;
+    width: 141px !important;
+    height: 46px !important;
+    color: red !important;
+}
+.navbarItems ul .allies{
+    display: block !important;
+}
+
+.navbarItems ul .allies button{
+    border-radius: 50px !important;
+    background: none !important;
+    border: 1px solid red !important;
+    width: 141px !important;
+    height: 46px !important;
+    color: red !important;
+}
+
+.requisitos .items h1{
+    display: none;
+}
+.requisitos .items .requi {
+    background: url(https://creditoacr.com/wp-content/uploads/2022/04/2-Cómo-comprar.png) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    width: 577px;    height: 1124px !important;
+    margin-left: 128px !important;
+    margin-bottom: 40px;
+}
+.beneficiosSection{
+    background: url(https://creditoacr.com/wp-content/uploads/2022/04/3-1.png) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    height: 1286px;
+    width: 100%;
+    display: grid;
+}
+.beneficiosSection button{
+    width: 249px;
+    height: 58px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 540px;
+    margin-left: 334px;
+}
+.beneficiosSection .aliadoB{
+    margin-top: 485px;
+    margin-left: 332px;
+}
+
+.footerSect{
+    background: url(https://creditoacr.com/wp-content/uploads/2022/04/7.png) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    height: 352px;
+}
+
+.footerSect .menuFooter{
+    display: none;
+}
+
+.footerSect .menuFooterSegundo{
+    display: none;
+
+}
+.appSection {
+background: url(https://creditoacr.com/wp-content/uploads/2022/04/4-beneficios-de-la-app.png);
+height: 517px;
+    width: 633px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 151px;
+}
+
+}
+
+@media (max-width: 821px) {
+    .requisitos .items .requi {
+    width: 458px;
+    height: 869px !important;
+    margin-left: 122px !important;
+}
+
+.beneficiosSection {
+    height: 934px;
+    margin-bottom: 54px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 423px;
+    margin-left: 278px;
+}
+.beneficiosSection .aliadoB{
+    margin-top: 417px;
+    margin-left: 262px;
+}
+.appSection {
+    height: 417px;
+        width: 506px;
+    margin-left: 144px;
+}
+}
+@media (max-width: 769px) {
+    .footerSect {
+    height: 294px;
+}
+}
+@media (max-width: 664px) {
+    .navbarItems ul .consul button {
+    width: 133px !important;
+    height: 38px !important;
+}
+.navbarItems ul .allies button {
+    width: 126px !important;
+    height: 37px !important;
+}
+.requisitos .items .requi {
+    width: 403px;
+    height: 784px !important;
+    margin-left: 91px !important;
+}
+.beneficiosSection {
+    height: 833px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 336px;
+    margin-left: 199px;
+}
+.beneficiosSection .aliadoB{
+    margin-top: 331px;
+    margin-left: 202px;
+}
+.appSection {
+    margin-left: 95px !important;
+}
+.footerSect {
+    height: 243px;
+}
+}
+@media (max-width: 600px) {
+    .navbarItems ul li i {
+    font-size: 37px;
+}
+.navbarItems ul .allies button {
+    width: 82px !important;
+    height: 30px !important;
+}
+.navbarItems ul .consul button {
+    width: 121px !important;
+    height: 32px !important;
+}
+.requisitos .items .requi {
+    margin-left: 67px !important;
+}
+.beneficiosSection {
+    height: 754px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 297px;
+    margin-left: 165px;
+}
+.beneficiosSection .aliadoB{
+    margin-top: 277px;
+    margin-left: 157px;
+}
+.appSection {
+    margin-left: 56px !important;
+}
+}
+@media (max-width: 556px) {
+    nav .navbarItems ul li {
+    margin-right: 5px;
+}
+nav .logoNavbar {
+    margin-left: 17px;
+}
+.requisitos .items .requi {
+    width: 464px;
+    height: 933px !important;
+    margin-left: -14px !important;
+}
+.beneficiosSection {
+    height: 699px;
+}
+.beneficiosSection button {
+    width: 234px;
+    height: 47px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 277px;
+    margin-left: 148px;
+}
+.beneficiosSection .aliadoB{
+    margin-top: 270px;
+    margin-left: 145px;
+}
+.appSection {
+    margin-left: 28px !important;
+}
+.footerSect {
+    height: 216px;
+}
+    
+}
+@media (max-width: 502px) {
+    nav .logoNavbar {
+    margin-left: 0px;
+}
+.appSection {
+    margin-left: 0 !important;
+}
+.requisitos .items .requi {
+    margin-left: 0 !important;
+}
+.beneficiosSection {
+    height: 624px;
+}
+.beneficiosSection button {
+    width: 212px;
+    height: 41px;
+    font-size: 20px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 250px;
+    margin-left: 126px;
+}
+.beneficiosSection .aliadoB{
+    margin-top: 237px;
+    margin-left: 129px;
+}
+.footerSect {
+    height: 189px;
+}
+    
+}
+@media (max-width: 473px) {
+    nav .logoNavbar img {
+     margin-right: 0px;
+    width: 192px !important;
+
+}
+    .appSection {
+    margin-left: 15px !important;
+    height: 356px;
+    width: 436px;
+}
+.navbarItems ul li i {
+    font-size: 21px;
+}
+.requisitos .items .requi {
+    margin-left: 0px !important;
+    width: 397px;
+    height: 778px !important;
+}
+.beneficiosSection {
+    height: 602px;
+}
+.slider-container {
+    padding: 0px;
+}
+
+.beneficiosSection {
+    height: 587px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 237px;
+    margin-left: 119px;
+}
+.beneficiosSection .aliadoB{
+    margin-top: 228px;
+    margin-left: 114px;
+}
+}
+@media (max-width: 429px) {
+    nav .logoNavbar img {
+    width: 169px !important;
+}
+.navbarItemsMovil {
+    height: 305.188px;
+}
+.navbarItemsMovil .firtsNavs ul {
+    margin-bottom: 32px;
+    padding-left: 0px;
+    margin-left: 21px;
+    margin-top: 130px;
+}
+.navbarItemsMovil .firtsNavs ul li a {
+    font-size: 11px;   
+}
+.navbarItemsMovil .firtsNavs ul li {
+    margin-top: 11px;
+}
+.navbarItemsMovil .secondNavs ul {
+    padding-left: 0px;
+    margin-top: 102px;
+    margin-left: 19px;
+}
+.navbarItemsMovil .secondNavs ul li {
+    margin-top: 15px;
+}
+.navbarItemsMovil .secondNavs ul li a {
+    font-size: 15px;
+    
+}
+.appSection {
+    margin-left: 18px !important;
+    height: 319px;
+    width: 383px;
+}
+}
+@media (max-width: 400px) {
+    nav .logoNavbar img {
+    width: 154px !important;
+}
+.navbarItems ul .consul button {
+    width: 122px !important;
+    height: 30px !important;
+}
+.navbarItems ul .allies button {
+    width: 74px !important;
+    height: 30px !important;
+}
+.requisitos .items .requi {
+    margin-left: -38px !important;
+}
+.beneficiosSection {
+    height: 501px;
+}
+.beneficiosSection button {
+    width: 169px;
+    height: 35px;
+    font-size: 18px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 201px;
+    margin-left: 99px;
+}
+.beneficiosSection .aliadoB{
+    margin-top: 191px;
+    margin-left: 106px;
+}
+.appSection {
+    height: 301px;
+    width: 356px;
+}
+.aliados .aliadosText h2 {
+    font-size: 27px;
+}
+.footerSect {
+    height: 158px;
+}
+}
+@media (max-width: 375px) {
+    nav .logoNavbar img {
+    width: 138px !important;
+}
+.navbarItems ul li i {
+    font-size: 19px;
+}
+.navbarItems ul .consul button {
+    height: 25px !important;
+}
+.navbarItems ul .allies button {
+    height: 26px !important;
+}
+.requisitos .items .requi {
+    margin-left: -61px !important;
+}
+.beneficiosSection {
+    height: 458px;
+}
+.appSection {
+    height: 276px;
+    width: 333px;
+}
+.footerSect {
+    height: 136px;
+}
+nav .navbarItems ul li {
+    margin-right: 0;
+}
+.navbarItemsMovil .secondNavs ul li a {
+    font-size: 12px;
+}
+}
+@media (max-width: 320px) {
+    .navbarItems ul .allies button {
+    width: 57px !important;
+    height: 30px !important;
+}
+.requisitos .items .requi {
+    margin-left: -101px !important;
+}
+.appSection {
+    height: 238px;
+    width: 274px;
+}
+.navbarItems ul .allies button {
+    width: 63px !important;
+    height: 38px !important;
+}
+.navbarItems ul .consul button {
+    width: 92px !important;
+    height: 35px !important;
+}
+.beneficiosSection {
+    height: 394px;
+}
+.beneficiosSection button {
+    width: 133px;
+    height: 25px;
+    font-size: 12px;
+}
+.beneficiosSection .obtenerB {
+    margin-top: 160px;
+    margin-left: 93px;
+}
+.beneficiosSection .aliadoB{
+    margin-top: 154px;
+    margin-left: 99px;
+
+}
+.footerSect {
+    height: 116px;
+}
+}
+@media (max-width: 300px) {
+    .requisitos .items .requi {
+    margin-left: 0px !important;
+}
+.appSection {
+    height: 210px;
+    width: 257px;
+}
+.beneficiosSection {
+    height: 348px;
+}
+}
+
+
+            </style>
+
+<nav>
+    <div class="logoNavbar">
+        <img src="https://creditoacr.com/wp-content/uploads/2019/08/Logo-credito-ACR.png" alt="" style="margin-right: 0px; width: 228px">
+    </div>
+    <div class="navbarItems">
+        <ul class="deskt">
+            <li><button onclick="barss()" style="background: none !important;border: none !important;"><i class="fa-solid fa-bars"  style="display: none;"></i></button></li>
+            <li class="consul" style="display: none;"><button>Consulta mi cuota</button></li>
+            <li class="allies" style="display: none;"><button>Aliados</button></li>
+            <li><a href="">¿Qué es el salario garantizado? <div style="margin-top: 10px;"></div></a></li>
+            <li><a href="">Descarga la app <div style="margin-top: 10px;border-bottom: 1px solid #111;"></div></a></li>
+            <li><a href="">Aliados <div style="margin-top: 10px;"></div></a></li>
+            <li><a href="">Mi cuota <div style="margin-top: 10px;border-bottom: 1.2px solid #111;"></div></a></li>
+            <li><a href="">Sea nuestro Aliado <div style="margin-top: 10px;"></div></a></li>
+            <li><a href="">Nosotros <div style="margin-top: 10px;border-bottom: 1px solid #111;"></div></a></li>
+            <li><a href="">Sostenibilidad <div style="margin-top: 10px;"></div></a></li>
+            <li><a href="">Pago en linea <div style="margin-top: 10px;border-bottom: 1px solid #111;"></div></a></li>
+            <li><a href="">Simulador de credito <div style="margin-top: 10px;"></div></a></li>
+        </ul>
+    </div>
+</nav>
+<div id="navbarItemsMovil" class="navbarItemsMovil" style="display: none;">
+    <div class="firtsNavs">
+    <ul>
+        <li><a href="">¿Qué es el salario garantizado?</a></li>
+        <li><a href="">Descarga la app</a></li>
+        <li><a href="">Sea nuestro Aliado</a></li>
+        <li><a href="">Nosotros</a></li>
+
+    </ul>
+    </div>
+    <div class="secondNavs">
+        <ul>
+        <li><a href="">Sostenibilidad</a></li>
+        <li><a href="">Pago en linea</a></li>
+        <li><a href="">Simulador de credito</a></li>
+    </ul>
+</div>
+</div>
+<section>
+    <div style="width: 100%;background: brown;height: 597px;text-align: center;position: unset;">
+        <div style="display: grid;justify-content: center;align-items: center;">        
+            <h1 style="margin-top: 350px; color: white;">Slider position</h1>
+        </div>
+    </div>
+
+    <div class="requisitos">
+        <div class="items">
+        <div class="requi" style="background: url(https://creditoacr.com/wp-content/uploads/2022/04/2-Comprar-es-facil.png);margin-left: 0px;background-repeat: no-repeat;background-size: cover;"></div>
+        </div>
+    </div>
+
+    <div class="beneficiosSection">
+        <button class="obtenerB">Cómo obtenerlo</button>
+        <button class="aliadoB">Sea un aliado</button>
+
+    </div>
+
+    <div class="appSection">
+
+    </div>
+
+
+    <div class="aliados">
+        <div class="aliadosText">
+        <h2>Un aliado para todo lo que <br> quieres conseguir.</h2>
+        <h4>Con Crédito ACR puedes acceder a gran cantidad de categorías de <br> productos y servicios y pagarlos en cómodas cuotas. Más de <br> 500 comercios aliados a nivel nacional.</h4>
+        </div>
+        <div class="slider-container">
+            <ul class="slider-list">
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-tecnología.png" /></a>
+                <span>Tecnologia</span>
+              </li>
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-odontologia.png" /></a>
+                <span>Odontología</span>
+
+              </li>
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-electrodomesticos.png" /></a>
+                <span>Electrodomésticos</span>
+
+              </li>
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-bicicletas.png" /></a>
+                <span>Bicicletas</span>
+
+              </li>
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-muebles.png" /></a>
+                <span>Muebles</span>
+
+              </li>
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-opticas.png" /></a>
+                <span>Ópticas</span>
+
+              </li>
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-tecnología.png" /></a>
+                <span>Tecnologia</span>
+              </li>
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-odontologia.png" /></a>
+                <span>Odontología</span>
+
+              </li>
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-electrodomesticos.png" /></a>
+                <span>Electrodomésticos</span>
+
+              </li>
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-bicicletas.png" /></a>
+                <span>Bicicletas</span>
+
+              </li>
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-muebles.png" /></a>
+                <span>Muebles</span>
+
+              </li>
+              <li class="slider-item" style="display: grid;">
+                <a href="#"><img src="icono-opticas.png" /></a>
+                <span>Ópticas</span>
+
+              </li>
+            </ul>
+            <div class="slider-arrows">
+              <button type="button" class="slider-arrow-prev"><i class="fa-solid fa-angle-left"></i></button>
+              <button style="margin-right: 17px;" type="button" class="slider-arrow-next"><i class="fa-solid fa-angle-right"></i></button>
+              
+            </div>
+          </div>
+    
+    </div>
+
+    <div style="width: 100%;background: white;height: 500px;text-align: center;position: unset;top: 70px;">
+        <div style="display: grid;justify-content: center;align-items: center;">        
+            <h1 style="margin-top: 350px; color: black;">Simulador de credito position</h1>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+<div class="footerSect">
+    <div class="menuFooter">
+        <ul>
+            <li><a href="">Descarga la App</a></li>
+            <li><a href="">Aliados</a></li>
+            <li><a href="">Mi cuota</a></li>
+            <li><a href="">Pago en línea</a></li>
+            <li><a href="">Simulador de crédito</a></li>
+
+        </ul>
+    </div>
+    <div class="menuFooterSegundo">
+        <ul>
+            <li><a href="">Sea nuestro aliado</a></li>
+            <li><a href="">Nosotros</a></li>
+            <li><a href="">Sostenibilidad</a></li>
+            <li><a href="">Contactanos</a></li>
+        </ul>
+    </div>
+</div>
+</footer>
+
+<script>
+    
+    function barss() {
+        if(document.getElementById('navbarItemsMovil').style.display === 'flex'){
+            document.getElementById('navbarItemsMovil').style.display = 'none'
+        }else{
+            document.getElementById('navbarItemsMovil').style.display = 'flex'
+        }
+    }
+    // Get HTML elements
+  const sliderList = document.querySelector(".slider-list");
+  const sliderItems = document.querySelectorAll(".slider-item");
+  const sliderNext = document.querySelector(".slider-arrow-next");
+  const sliderPrev = document.querySelector(".slider-arrow-prev");
+
+  // Define variables
+  let numberOfItems;
+  let itemIndex;
+
+  // Define media queries
+  const mediaQueryList = [
+    window.matchMedia("(max-width: 650px)"),
+    window.matchMedia("(max-width: 991px)")
+  ];
+
+  // Display slider items
+  const displayItems = () => {
+    let html = "";
+    let len = itemIndex + numberOfItems;
+    for (let i = itemIndex; i < len; i++) {
+      html += sliderItems[i].outerHTML;
+    }
+    sliderList.innerHTML = html;
+  };
+
+  // Handel number of slides and set slides height and width
+  const HandleScreen = () => {
+    if (mediaQueryList[0].matches) {
+      numberOfItems = 3;
+      itemIndex = 0;
+      // set width and height to item for when image does not load
+      sliderItems.forEach((item) => {
+        item.style.width = "100%";
+        item.style.minHeight = "150px";
+      });
+    } else if (mediaQueryList[1].matches) {
+      numberOfItems = 3;
+      itemIndex = 0;
+      // set width and height to item for when image does not load
+      sliderItems.forEach((item) => {
+        item.style.width = "50%";
+        item.style.minHeight = "150px";
+      });
+    } else {
+      numberOfItems = 6;
+      itemIndex = 0;
+      // set width and height to item for when image does not load
+      sliderItems.forEach((item) => {
+        item.style.width = "35%";
+        item.style.minHeight = "150px";
+      });
+    }
+    displayItems();
+  };
+
+  // Run handel screen function for the first time
+  HandleScreen();
+
+  // Add listener to media query list items
+  for (let i = 0; i < mediaQueryList.length; i++) {
+    mediaQueryList[i].addListener(HandleScreen);
+  }
+
+  // Diplay next slide
+  sliderNext.addEventListener("click", function () {
+    if (itemIndex < sliderItems.length - numberOfItems) {
+      itemIndex++;
+      displayItems();
+    }
+  });
+
+  // Display Previous slide
+  sliderPrev.addEventListener("click", function () {
+    if (itemIndex > 0) {
+      itemIndex--;
+      displayItems();
+    }
+  });
+
+</script>
+</body>
+</html>
